@@ -1,0 +1,182 @@
+@import 'izitoast/dist/css/iziToast.min.css';
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  background-color: #007bff;
+  color: #fff;
+  padding: 20px 0;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form {
+  display: flex;
+}
+
+.form input {
+  padding: 10px;
+  border: none;
+  border-radius: 4px 0 0 4px;
+  width: 250px;
+}
+
+.form button {
+  padding: 10px 20px;
+  background-color: #0056b3;
+  color: #fff;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+}
+
+.header-btns button {
+  padding: 10px 20px;
+  background-color: #fff;
+  color: #007bff;
+  border: none;
+  border-radius: 4px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.delete-all-btn {
+  background-color: #dc3545 !important;
+  color: #fff !important;
+}
+
+.nodes {
+  padding: 20px;
+}
+
+.nodes-title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.nodes-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); /* Изменено на 6 колонок */
+  gap: 20px;
+}
+
+.nodes-item {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nodes-item-title {
+  margin-bottom: 10px;
+}
+
+.nodes-item-description {
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.nodes-item-btns button {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.nodes-item-btns .delete-all-btn {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.nodes-item-btns .add-node-btn {
+  background-color: #ffc107;
+}
+
+/* Modal styles */
+.modal-overlay {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  visibility: hidden;
+  pointer-events: none;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-overlay.is-open {
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.modal {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 500px;
+  border-radius: 8px;
+  position: relative;
+}
+
+.modal-close-btn {
+  color: #aaa;
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.modal-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.modal-form input,
+.modal-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.modal-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.modal-save-node {
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}

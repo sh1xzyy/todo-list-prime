@@ -1,12 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Todo</title>
+    <title>ToDo List</title>
     <link rel="stylesheet" href="./css/styles.css" />
+    <script src="./main.js" type="module"></script>
   </head>
   <body>
-    <script type="module" src="./main.js"></script>
+    <header class="header">
+      <div class="container">
+        <form class="form">
+          <input
+            type="text"
+            name="searchNode"
+            placeholder="Search"
+            id="searchNode"
+          />
+          <button class="search-btn" type="button" id="searchNodeBtn">
+            Search
+          </button>
+        </form>
+        <div class="header-btns">
+          <button class="delete-all-btn" id="deleteAllNodeBtn" type="button">
+            Delete All
+          </button>
+          <button class="add-node-btn" id="addNodeBtn" type="button">
+            Add Node
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <section class="nodes">
+      <h2 class="nodes-title">Nodes</h2>
+      <ul class="nodes-list"></ul>
+    </section>
+
+    <div class="modal-overlay">
+      <div class="modal">
+        <button type="button" class="modal-close-btn" id="modalCloseBtn">
+          x
+        </button>
+        <form class="modal-form">
+          <label class="modal-node-label" for="nodeInput">Title</label>
+          <input
+            class="modal-node-input"
+            type="text"
+            name="nodeInput"
+            id="nodeInput"
+          />
+          <label class="modal-node-label" for="nodetextarea">Title</label>
+          <textarea
+            class="modal-node-textarea"
+            name="nodeTextarea"
+            id="nodeTextarea"
+          ></textarea>
+          <button class="modal-save-node" type="button" id="saveNode">
+            Save
+          </button>
+        </form>
+      </div>
+    </div>
   </body>
 </html>
