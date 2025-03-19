@@ -1,5 +1,7 @@
 export const refs = {
-  headerForm: document.querySelector('.header'),
-  modalOverlay: document.querySelector('.modal-overlay'),
-  list: document.querySelector('.nodes-list'),
-};
+  form: document.querySelector(".form"),
+  headerBtns: document.querySelector('.header-btns'),
+  modalOverlay: document.querySelector(".modal-overlay"),
+  modalForm: document.querySelector(".modal-form"),
+  list: document.querySelector(".nodes-list"),
+} 
