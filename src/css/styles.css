@@ -7,10 +7,63 @@ body {
   background-color: #f4f4f4;
 }
 
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+ul,
+ol {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+address {
+  font-style: normal;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  display: block;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
 .container {
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
+}
+
+.iziToast > .iziToast-close {
+  opacity: 0.8;
+  background: url('../img/bi_x-lg.svg') no-repeat 50% 50%;
+  background-size: 16px;
 }
 
 .header {
@@ -55,9 +108,9 @@ body {
   cursor: pointer;
 }
 
-.delete-all-btn {
-  background-color: #dc3545 !important;
-  color: #fff !important;
+#deleteAllNodeBtn {
+  background-color: #dc3545;
+  color: #fff;
 }
 
 .nodes {
@@ -73,7 +126,7 @@ body {
   list-style: none;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(6, 1fr); /* Изменено на 6 колонок */
+  grid-template-columns: repeat(4, 1fr);
   gap: 20px;
 }
 
@@ -110,7 +163,6 @@ body {
   background-color: #ffc107;
 }
 
-/* Modal styles */
 .modal-overlay {
   position: fixed;
   z-index: 1;
@@ -180,4 +232,30 @@ body {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+}
+
+.loader {
+  position: fixed;
+  top: 48.6%;
+  left: 48.6%;
+  opacity: 0;
+  visibility: hidden;
+  width: 25px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 4px solid lightblue;
+  border-right-color: orange;
+  animation: l2 1s infinite linear;
+  z-index: 999;
+}
+
+.loader.is-loading {
+  opacity: 1;
+  visibility: visible;
+}
+
+@keyframes l2 {
+  to {
+    transform: rotate(1turn);
+  }
 }

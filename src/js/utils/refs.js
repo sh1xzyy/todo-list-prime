@@ -1,7 +1,10 @@
+// DOM Items
+
 export const refs = {
-  form: document.querySelector(".form"),
+  form: document.querySelector('.form'),
   headerBtns: document.querySelector('.header-btns'),
-  modalOverlay: document.querySelector(".modal-overlay"),
-  modalForm: document.querySelector(".modal-form"),
-  list: document.querySelector(".nodes-list"),
-} 
+  modalOverlay: document.querySelector('.modal-overlay'),
+  modalForm: document.querySelector('.modal-form'),
+  list: document.querySelector('.nodes-list'),
+  loader: document.querySelector('.loader'),
+};

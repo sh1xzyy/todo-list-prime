@@ -1,7 +1,8 @@
-import { refs } from "../utils/refs"
+import { refs } from '../utils/refs';
 
-const createMarkup = ({id, title, description}) => {
-    return `
+// Markup
+const createMarkup = ({ id, title, description }) => {
+  return `
     <li class="nodes-item" data-id="${id}">
           <h3 class="nodes-item-title">${title}</h3>
           <p class="nodes-item-description">${description}</p>
@@ -10,7 +11,11 @@ const createMarkup = ({id, title, description}) => {
             <button class="delete-node-btn" type="button" id="deleteNodeBtn">Delete</button>
           </div>
         </li>
-    `
-}
+    `;
+};
 
-// Rendering all Nodes
+// Rendering nodes
+export const renderMarkup = data => {
+  const markup = data.map(node => createMarkup(node)).join('');
+  refs.list.innerHTML = markup;
+};
