@@ -46,3 +46,13 @@ export const deleteNode = async nodeId => {
     throw error;
   }
 };
+
+export const replaceNode = async (data, nodeId) => {
+  try {
+    const response = await axios.put(`${nodeId}`, data)
+    return response
+  } catch (error) {
+    console.log("Something went wrong with replacing nodes values!");
+    throw error
+  }
+}

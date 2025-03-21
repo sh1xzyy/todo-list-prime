@@ -58,6 +58,6 @@ export const onHandleEscapeKey = event => {
   }
 };
 
-const closeModal = () => {
+export const closeModal = () => {
   refs.modalOverlay.classList.remove('is-open');
 };
